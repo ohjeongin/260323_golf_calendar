@@ -1,5 +1,33 @@
 [
   {
+    "id": "kjga-2026-001",
+    "name": "2026 스릭슨배 전국중고등학생골프대회",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": false,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": {
+        "start": "2026-03-05",
+        "end": "2026-03-09"
+      },
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-16",
+        "end": "2026-03-20"
+      }
+    },
+    "venue": "군산CC",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24.asp"
+  },
+  {
     "id": "cn-2026-001",
     "name": "충청남도학생선수권 골프대회",
     "association": "충남",
@@ -10,11 +38,582 @@
     "dates": {
       "registration": null,
       "qualification": null,
-      "finals": { "start": "2026-03-23", "end": "2026-03-24" }
+      "finals": {
+        "start": "2026-03-23",
+        "end": "2026-03-24"
+      }
     },
     "venue": "청주그랜드 CC",
-    "categories": ["남자 고등부", "남자 중등부", "여자 고등부", "여자 중등부"],
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
     "url": "https://041-634-6821.kweb114.co.kr/m/sub.html?mc=5215&mo=1&mn=4878&ms=4877"
+  },
+  {
+    "id": "kjga-2026-1774257131848-tayu",
+    "name": "제13회 한국C&T배 전국중·고등학생골프대회 안내",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-23",
+        "end": "2026-03-23"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=688&page=1&news_s=&find="
+  },
+  {
+    "id": "kjga-2026-1774257132401-0qhr",
+    "name": "2026 두산연강 골프꿈나무 장학생 선발 안내",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-23",
+        "end": "2026-03-23"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=687&page=1&news_s=&find="
+  },
+  {
+    "id": "kjga-2026-1774257132989-rm3o",
+    "name": "2026 스릭슨배 안내문, 로컬룰 및 거리표",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-23",
+        "end": "2026-03-23"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=685&page=1&news_s=&find="
+  },
+  {
+    "id": "kjga-2026-1774257133623-61cv",
+    "name": "2026 스릭슨배 전국중·고등학생골프대회 안내",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-23",
+        "end": "2026-03-23"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=683&page=1&news_s=&find="
+  },
+  {
+    "id": "kjga-2026-1774257134281-7fwi",
+    "name": "2026년도 무안cc대회 남고/남중부 셀프라운드 안내",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-23",
+        "end": "2026-03-23"
+      },
+      "practice": null
+    },
+    "venue": "물품은 골프장",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=682&page=1&news_s=&find="
+  },
+  {
+    "id": "kjga-2026-1774257134854-kz94",
+    "name": "2026 골프규칙교실 안내",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-23",
+        "end": "2026-03-23"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=680&page=1&news_s=&find="
+  },
+  {
+    "id": "cn-2026-0323",
+    "name": "03-24",
+    "association": "충남",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-23",
+        "end": "2026-03-23"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [],
+    "url": "https://041-634-6821.kweb114.co.kr/m/sub.html?mc=5215&mo=1&mn=4878&ms=4877"
+  },
+  {
+    "id": "kga-2026-1762",
+    "name": "제4회 임실치즈배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-03-30",
+        "end": "2026-03-30"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "전주샹그릴라",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1762"
+  },
+  {
+    "id": "kga-2026-1761",
+    "name": "제4회 임실치즈배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-03-30",
+        "end": "2026-03-30"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "전주샹그릴라",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1761"
+  },
+  {
+    "id": "kga-2026-1763",
+    "name": "제4회 임실치즈배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-03-31",
+        "end": "2026-03-31"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "전주샹그릴라",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1763"
+  },
+  {
+    "id": "kga-2026-1717",
+    "name": "제4회 임실치즈배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-03-31",
+        "end": "2026-03-31"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "전주샹그릴라",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1717"
+  },
+  {
+    "id": "kga-2026-1764",
+    "name": "제4회 임실치즈배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-04-01",
+        "end": "2026-04-01"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "전주샹그릴라",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1764"
+  },
+  {
+    "id": "kga-2026-1718",
+    "name": "제4회 임실치즈배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-04-01",
+        "end": "2026-04-01"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "전주샹그릴라",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1718"
+  },
+  {
+    "id": "kga-2026-1765",
+    "name": "제4회 임실치즈배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-04-02",
+        "end": "2026-04-02"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "전주샹그릴라",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1765"
+  },
+  {
+    "id": "kga-2026-1719",
+    "name": "제4회 임실치즈배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-04-02",
+        "end": "2026-04-02"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "전주샹그릴라",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1719"
+  },
+  {
+    "id": "kga-2026-1766",
+    "name": "제4회 임실치즈배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-04-03",
+        "end": "2026-04-03"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "전주샹그릴라",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1766"
+  },
+  {
+    "id": "kga-2026-1720",
+    "name": "제4회 임실치즈배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-04-03",
+        "end": "2026-04-03"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "전주샹그릴라",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1720"
+  },
+  {
+    "id": "kga-2026-001",
+    "name": "제4회 임실치즈배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": {
+        "start": "2026-03-20",
+        "end": "2026-03-27"
+      },
+      "qualification": {
+        "start": "2026-03-31",
+        "end": "2026-04-03"
+      },
+      "finals": {
+        "start": "2026-04-07",
+        "end": "2026-04-10"
+      }
+    },
+    "venue": "전주 샹그릴라",
+    "categories": [
+      "남자부",
+      "여자부"
+    ],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1721"
+  },
+  {
+    "id": "kga-2026-1721",
+    "name": "제4회 임실치즈배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-04-07",
+        "end": "2026-04-10"
+      },
+      "practice": null
+    },
+    "venue": "전주샹그릴라",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1721"
+  },
+  {
+    "id": "kga-2026-1722",
+    "name": "코오롱 제68회 한국오픈골프선수권대회(1차 예선전)",
+    "association": "KGA",
+    "type": "open",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-04-20",
+        "end": "2026-04-20"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "라비에벨 듄스",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1722"
+  },
+  {
+    "id": "kga-2026-1723",
+    "name": "코오롱 제68회 한국오픈골프선수권대회(1차 예선전)",
+    "association": "KGA",
+    "type": "open",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-04-21",
+        "end": "2026-04-21"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "라비에벨 듄스",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1723"
+  },
+  {
+    "id": "kga-2026-1724",
+    "name": "코오롱 제68회 한국오픈골프선수권대회(1차 예선전)",
+    "association": "KGA",
+    "type": "open",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-04-22",
+        "end": "2026-04-22"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "라비에벨 듄스",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1724"
+  },
+  {
+    "id": "kga-2026-1725",
+    "name": "코오롱 제68회 한국오픈골프선수권대회(1차 예선전)",
+    "association": "KGA",
+    "type": "open",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-04-23",
+        "end": "2026-04-23"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "라비에벨 듄스",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1725"
+  },
+  {
+    "id": "kga-2026-1726",
+    "name": "코오롱 제68회 한국오픈골프선수권대회(1차 예선전)",
+    "association": "KGA",
+    "type": "open",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-04-24",
+        "end": "2026-04-24"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "라비에벨 듄스",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1726"
+  },
+  {
+    "id": "kga-2026-1727",
+    "name": "제24회 빛고을중흥배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-04-27",
+        "end": "2026-04-27"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "골드레이크",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1727"
   },
   {
     "id": "cn-2026-002",
@@ -27,15 +626,21 @@
     "dates": {
       "registration": null,
       "qualification": null,
-      "finals": { "start": "2026-04-29", "end": "2026-04-30" }
+      "finals": {
+        "start": "2026-04-29",
+        "end": "2026-04-30"
+      }
     },
     "venue": "솔라 CC",
-    "categories": ["남자부", "여자부"],
+    "categories": [
+      "남자부",
+      "여자부"
+    ],
     "url": "https://041-634-6821.kweb114.co.kr/m/sub.html?mc=5215&mo=1&mn=4878&ms=4877"
   },
   {
-    "id": "cn-2026-003",
-    "name": "제27회 충남지사배 골프대회",
+    "id": "cn-2026-0429",
+    "name": "04-30",
     "association": "충남",
     "type": "amateur",
     "year": 2026,
@@ -44,45 +649,15 @@
     "dates": {
       "registration": null,
       "qualification": null,
-      "finals": { "start": "2026-06-08", "end": "2026-06-08" }
+      "finals": {
+        "start": "2026-04-29",
+        "end": "2026-04-29"
+      },
+      "practice": null
     },
-    "venue": "우정힐스 CC",
-    "categories": ["남자부", "여자부"],
+    "venue": "미정",
+    "categories": [],
     "url": "https://041-634-6821.kweb114.co.kr/m/sub.html?mc=5215&mo=1&mn=4878&ms=4877"
-  },
-  {
-    "id": "cn-2026-004",
-    "name": "제78회 충남도민체육대회 골프",
-    "association": "충남",
-    "type": "amateur",
-    "year": 2026,
-    "verified": true,
-    "lastVerified": "2026-03-23",
-    "dates": {
-      "registration": null,
-      "qualification": null,
-      "finals": { "start": "2026-09-03", "end": "2026-09-04" }
-    },
-    "venue": "당진 파인스톤 CC",
-    "categories": ["남자부", "여자부"],
-    "url": "https://041-634-6821.kweb114.co.kr/m/sub.html?mc=5215&mo=1&mn=4878&ms=4877"
-  },
-  {
-    "id": "kga-2026-001",
-    "name": "제4회 임실치즈배 아마추어골프선수권대회",
-    "association": "KGA",
-    "type": "amateur",
-    "year": 2026,
-    "verified": true,
-    "lastVerified": "2026-03-23",
-    "dates": {
-      "registration": { "start": "2026-03-20", "end": "2026-03-27" },
-      "qualification": { "start": "2026-03-31", "end": "2026-04-03" },
-      "finals": { "start": "2026-04-07", "end": "2026-04-10" }
-    },
-    "venue": "전주 샹그릴라",
-    "categories": ["남자부", "여자부"],
-    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1721"
   },
   {
     "id": "kga-2026-002",
@@ -93,12 +668,23 @@
     "verified": false,
     "lastVerified": "2026-03-23",
     "dates": {
-      "registration": { "start": "2026-04-01", "end": "2026-04-10" },
-      "qualification": { "start": "2026-04-20", "end": "2026-04-23" },
-      "finals": { "start": "2026-04-30", "end": "2026-05-03" }
+      "registration": {
+        "start": "2026-04-01",
+        "end": "2026-04-10"
+      },
+      "qualification": {
+        "start": "2026-04-20",
+        "end": "2026-04-23"
+      },
+      "finals": {
+        "start": "2026-04-30",
+        "end": "2026-05-03"
+      }
     },
     "venue": "라비에벨 듄스 / 남서울CC",
-    "categories": ["남자부"],
+    "categories": [
+      "남자부"
+    ],
     "url": "https://www.kgagolf.or.kr/web/elite/schedule"
   },
   {
@@ -112,62 +698,121 @@
     "dates": {
       "registration": null,
       "qualification": null,
-      "finals": { "start": "2026-04-30", "end": "2026-05-03" }
+      "finals": {
+        "start": "2026-04-30",
+        "end": "2026-05-03"
+      }
     },
     "venue": "남서울CC",
-    "categories": ["남자부"],
+    "categories": [
+      "남자부"
+    ],
     "url": "https://www.kgagolf.or.kr/web/elite/schedule"
   },
   {
-    "id": "kga-2026-004",
-    "name": "허정구배 제72회 한국아마추어골프선수권대회",
+    "id": "kga-2026-1728",
+    "name": "제45회 GS칼텍스 매경오픈골프선수권대회",
+    "association": "KGA",
+    "type": "open",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-04-30",
+        "end": "2026-05-03"
+      },
+      "practice": null
+    },
+    "venue": "남서울",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1728"
+  },
+  {
+    "id": "kga-2026-1729",
+    "name": "코오롱 제68회 한국오픈골프선수권대회(최종 예선전)",
+    "association": "KGA",
+    "type": "open",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-05-11",
+        "end": "2026-05-12"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "라비에벨 듄스",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1729"
+  },
+  {
+    "id": "kga-2026-1730",
+    "name": "제24회 빛고을중흥배 아마추어골프선수권대회",
     "association": "KGA",
     "type": "amateur",
     "year": 2026,
-    "verified": false,
+    "verified": true,
     "lastVerified": "2026-03-23",
     "dates": {
-      "registration": { "start": "2026-08-15", "end": "2026-08-25" },
-      "qualification": { "start": "2026-09-01", "end": "2026-09-04" },
-      "finals": { "start": "2026-09-08", "end": "2026-09-11" }
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-05-12",
+        "end": "2026-05-15"
+      },
+      "practice": null
     },
-    "venue": "미정",
-    "categories": ["남자부"],
-    "url": "https://www.kgagolf.or.kr/web/elite/schedule"
+    "venue": "골드레이크",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1730"
   },
   {
-    "id": "kga-2026-005",
-    "name": "강민구배 한국여자아마추어골프선수권대회",
+    "id": "kga-2026-1731",
+    "name": "참마루건설배 제32회 한국미드아마추어골프선수권대회",
     "association": "KGA",
     "type": "amateur",
     "year": 2026,
-    "verified": false,
+    "verified": true,
     "lastVerified": "2026-03-23",
     "dates": {
-      "registration": { "start": "2026-08-10", "end": "2026-08-20" },
+      "registration": null,
       "qualification": null,
-      "finals": { "start": "2026-09-01", "end": "2026-09-04" }
+      "finals": {
+        "start": "2026-05-19",
+        "end": "2026-05-21"
+      },
+      "practice": null
     },
-    "venue": "미정",
-    "categories": ["여자부"],
-    "url": "https://www.kgagolf.or.kr/web/elite/schedule"
+    "venue": "골드레이크",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1731"
   },
   {
-    "id": "kjga-2026-001",
-    "name": "2026 스릭슨배 전국중고등학생골프대회",
-    "association": "KJGA",
-    "type": "student",
+    "id": "kga-2026-1732",
+    "name": "코오롱 제68회 한국오픈골프선수권대회",
+    "association": "KGA",
+    "type": "open",
     "year": 2026,
-    "verified": false,
+    "verified": true,
     "lastVerified": "2026-03-23",
     "dates": {
-      "registration": { "start": "2026-03-05", "end": "2026-03-09" },
+      "registration": null,
       "qualification": null,
-      "finals": { "start": "2026-03-16", "end": "2026-03-20" }
+      "finals": {
+        "start": "2026-05-21",
+        "end": "2026-05-24"
+      },
+      "practice": null
     },
-    "venue": "군산CC",
-    "categories": ["남자 고등부", "남자 중등부", "여자 고등부", "여자 중등부"],
-    "url": "http://www.kjga.or.kr/n_Public/s24.asp"
+    "venue": "우정힐스",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1732"
   },
   {
     "id": "kjga-2026-002",
@@ -178,13 +823,299 @@
     "verified": false,
     "lastVerified": "2026-03-23",
     "dates": {
-      "registration": { "start": "2026-05-10", "end": "2026-05-16" },
+      "registration": {
+        "start": "2026-05-10",
+        "end": "2026-05-16"
+      },
       "qualification": null,
-      "finals": { "start": "2026-05-25", "end": "2026-05-29" }
+      "finals": {
+        "start": "2026-05-25",
+        "end": "2026-05-29"
+      }
     },
     "venue": "미정",
-    "categories": ["남자 고등부", "남자 중등부", "여자 고등부", "여자 중등부"],
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
     "url": "http://www.kjga.or.kr/n_Public/s24.asp"
+  },
+  {
+    "id": "kga-2026-1733",
+    "name": "제55회 전국소년체육대회 골프부경기",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-05-25",
+        "end": "2026-05-26"
+      },
+      "practice": null
+    },
+    "venue": "고성노벨",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1733"
+  },
+  {
+    "id": "cn-2026-003",
+    "name": "제27회 충남지사배 골프대회",
+    "association": "충남",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-06-08",
+        "end": "2026-06-08"
+      }
+    },
+    "venue": "우정힐스 CC",
+    "categories": [
+      "남자부",
+      "여자부"
+    ],
+    "url": "https://041-634-6821.kweb114.co.kr/m/sub.html?mc=5215&mo=1&mn=4878&ms=4877"
+  },
+  {
+    "id": "cn-2026-0608",
+    "name": "06-08",
+    "association": "충남",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-06-08",
+        "end": "2026-06-08"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [],
+    "url": "https://041-634-6821.kweb114.co.kr/m/sub.html?mc=5215&mo=1&mn=4878&ms=4877"
+  },
+  {
+    "id": "kga-2026-1734",
+    "name": "메르세데스-벤츠 제40회 한국여자오픈골프선수권대회",
+    "association": "KGA",
+    "type": "open",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-06-11",
+        "end": "2026-06-14"
+      },
+      "practice": null
+    },
+    "venue": "레이크우드",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1734"
+  },
+  {
+    "id": "kga-2026-1735",
+    "name": "제4회 클럽디 아마추어 에코 챔피언십",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-06-23",
+        "end": "2026-06-26"
+      },
+      "practice": null
+    },
+    "venue": "더플레이어스",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1735"
+  },
+  {
+    "id": "kga-2026-1736",
+    "name": "제10회 베어크리크배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-06-30",
+        "end": "2026-07-03"
+      },
+      "practice": null
+    },
+    "venue": "베어크리크 포천",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1736"
+  },
+  {
+    "id": "kga-2026-1737",
+    "name": "2026 박카스배 SBSGOLF 전국시도학생골프팀선수권대회",
+    "association": "KGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-07-09",
+        "end": "2026-07-10"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1737"
+  },
+  {
+    "id": "kga-2026-1738",
+    "name": "제3회 신한동해 남자아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-07-14",
+        "end": "2026-07-17"
+      },
+      "practice": null
+    },
+    "venue": "고창",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1738"
+  },
+  {
+    "id": "kga-2026-1739",
+    "name": "블루원배 제43회 한국주니어골프선수권대회",
+    "association": "KGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-07-22",
+        "end": "2026-07-24"
+      },
+      "practice": null
+    },
+    "venue": "블루원용인",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1739"
+  },
+  {
+    "id": "kga-2026-1740",
+    "name": "제33회 송암배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-07-23",
+        "end": "2026-07-23"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "대구",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1740"
+  },
+  {
+    "id": "kga-2026-1741",
+    "name": "제33회 송암배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": {
+        "start": "2026-07-24",
+        "end": "2026-07-24"
+      },
+      "finals": null,
+      "practice": null
+    },
+    "venue": "대구",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1741"
+  },
+  {
+    "id": "kga-2026-1742",
+    "name": "제25회 제주특별자치도지사배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-08-04",
+        "end": "2026-08-06"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1742"
+  },
+  {
+    "id": "kga-2026-1743",
+    "name": "제33회 송암배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-08-11",
+        "end": "2026-08-14"
+      },
+      "practice": null
+    },
+    "venue": "대구",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1743"
   },
   {
     "id": "kjga-2026-003",
@@ -195,13 +1126,133 @@
     "verified": false,
     "lastVerified": "2026-03-23",
     "dates": {
-      "registration": { "start": "2026-08-01", "end": "2026-08-08" },
+      "registration": {
+        "start": "2026-08-01",
+        "end": "2026-08-08"
+      },
       "qualification": null,
-      "finals": { "start": "2026-08-24", "end": "2026-08-28" }
+      "finals": {
+        "start": "2026-08-24",
+        "end": "2026-08-28"
+      }
     },
     "venue": "미정",
-    "categories": ["남자 고등부", "여자 고등부"],
+    "categories": [
+      "남자 고등부",
+      "여자 고등부"
+    ],
     "url": "http://www.kjga.or.kr/n_Public/s24.asp"
+  },
+  {
+    "id": "kga-2026-1745",
+    "name": "제30회 최등규배 매경아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-08-25",
+        "end": "2026-08-28"
+      },
+      "practice": null
+    },
+    "venue": "서원밸리",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1745"
+  },
+  {
+    "id": "kga-2026-005",
+    "name": "강민구배 한국여자아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": false,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": {
+        "start": "2026-08-10",
+        "end": "2026-08-20"
+      },
+      "qualification": null,
+      "finals": {
+        "start": "2026-09-01",
+        "end": "2026-09-04"
+      }
+    },
+    "venue": "미정",
+    "categories": [
+      "여자부"
+    ],
+    "url": "https://www.kgagolf.or.kr/web/elite/schedule"
+  },
+  {
+    "id": "kga-2026-1746",
+    "name": "강민구배 제50회 한국여자아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-09-01",
+        "end": "2026-09-04"
+      },
+      "practice": null
+    },
+    "venue": "유성",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1746"
+  },
+  {
+    "id": "cn-2026-004",
+    "name": "제78회 충남도민체육대회 골프",
+    "association": "충남",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-09-03",
+        "end": "2026-09-04"
+      }
+    },
+    "venue": "당진 파인스톤 CC",
+    "categories": [
+      "남자부",
+      "여자부"
+    ],
+    "url": "https://041-634-6821.kweb114.co.kr/m/sub.html?mc=5215&mo=1&mn=4878&ms=4877"
+  },
+  {
+    "id": "cn-2026-0903",
+    "name": "09-04",
+    "association": "충남",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-09-03",
+        "end": "2026-09-03"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [],
+    "url": "https://041-634-6821.kweb114.co.kr/m/sub.html?mc=5215&mo=1&mn=4878&ms=4877"
   },
   {
     "id": "kjga-2026-004",
@@ -212,12 +1263,177 @@
     "verified": false,
     "lastVerified": "2026-03-23",
     "dates": {
-      "registration": { "start": "2026-08-20", "end": "2026-08-26" },
+      "registration": {
+        "start": "2026-08-20",
+        "end": "2026-08-26"
+      },
       "qualification": null,
-      "finals": { "start": "2026-09-05", "end": "2026-09-07" }
+      "finals": {
+        "start": "2026-09-05",
+        "end": "2026-09-07"
+      }
     },
     "venue": "미정",
-    "categories": ["남자 고등부", "남자 중등부", "여자 고등부", "여자 중등부"],
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
     "url": "http://www.kjga.or.kr/n_Public/s24.asp"
+  },
+  {
+    "id": "kga-2026-004",
+    "name": "허정구배 제72회 한국아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": false,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": {
+        "start": "2026-08-15",
+        "end": "2026-08-25"
+      },
+      "qualification": {
+        "start": "2026-09-01",
+        "end": "2026-09-04"
+      },
+      "finals": {
+        "start": "2026-09-08",
+        "end": "2026-09-11"
+      }
+    },
+    "venue": "미정",
+    "categories": [
+      "남자부"
+    ],
+    "url": "https://www.kgagolf.or.kr/web/elite/schedule"
+  },
+  {
+    "id": "kga-2026-1747",
+    "name": "허정구배 제72회 한국아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-09-08",
+        "end": "2026-09-11"
+      },
+      "practice": null
+    },
+    "venue": "남서울",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1747"
+  },
+  {
+    "id": "kga-2026-1748",
+    "name": "제7회 드림파크배 아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-09-15",
+        "end": "2026-09-18"
+      },
+      "practice": null
+    },
+    "venue": "드림파크",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1748"
+  },
+  {
+    "id": "kga-2026-1749",
+    "name": "제19회 KB금융그룹배 여자아마추어골프선수권대회",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-09-30",
+        "end": "2026-10-02"
+      },
+      "practice": null
+    },
+    "venue": "센추리21",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1749"
+  },
+  {
+    "id": "kga-2026-1750",
+    "name": "제107회 전국체육대회 골프부경기",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-10-19",
+        "end": "2026-10-22"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1750"
+  },
+  {
+    "id": "kga-2026-1751",
+    "name": "제107회 전국체육대회 골프부경기",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-10-20",
+        "end": "2026-10-22"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1751"
+  },
+  {
+    "id": "kga-2026-1752",
+    "name": "제11회 영건스 매치플레이",
+    "association": "KGA",
+    "type": "amateur",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-10-26",
+        "end": "2026-10-30"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [],
+    "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1752"
   }
 ]
