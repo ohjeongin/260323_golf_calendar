@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="대한골프협회, 중고골프연맹, 충남골프협회 대회 일정을 한눈에 - 골프 대회 통합 캘린더">
+  <title>⛳ 골프 대회 캘린더</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="골프캘린더">
+  <meta name="theme-color" content="#0a4a1a">
+</head>
+<body>
+  <div class="app">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <span class="header-logo">⛳</span>
+        <div>
+          <h1 class="header-title">골프 대회 캘린더</h1>
+          <div class="header-subtitle">
+            <span>KGA · KJGA · 충남골프협회</span>
+            <button class="update-info" id="updateInfo" title="클릭하여 최신 데이터 로드">
+              <span class="update-time" id="updateTime">로딩 중...</span>
+              <span class="update-icon" id="updateIcon">↻</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="header-right">
+        <button class="btn-icon" id="btnSources" title="데이터 소스 확인">🔗</button>
+        <button class="btn-icon" id="btnSettings" title="설정">⚙️</button>
+        <button class="btn-icon" id="btnNotification" title="알림">
+          🔔<span class="badge hidden" id="notifBadge">0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Year + Month Navigation -->
+    <nav class="date-nav">
+      <div class="year-nav">
+        <button class="nav-btn" id="prevYear" title="이전 연도">◀</button>
+        <span class="year-title" id="yearTitle">2026년</span>
+        <button class="nav-btn" id="nextYear" title="다음 연도">▶</button>
+      </div>
+      <div class="month-nav">
+        <button class="nav-btn" id="prevMonth" title="이전 달">◀</button>
+        <h2 class="month-title" id="monthTitle">3월</h2>
+        <button class="nav-btn" id="nextMonth" title="다음 달">▶</button>
+        <button class="btn-today" id="todayBtn">오늘</button>
+      </div>
+    </nav>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <div class="filter-group">
+        <span class="filter-label">협회</span>
+        <button class="filter-btn active" data-filter="association" data-value="KGA">
+          <span class="dot kga"></span>KGA
+        </button>
+        <button class="filter-btn active" data-filter="association" data-value="KJGA">
+          <span class="dot kjga"></span>KJGA
+        </button>
+        <button class="filter-btn active" data-filter="association" data-value="충남">
+          <span class="dot chungnam"></span>충남
+        </button>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">일정</span>
+        <button class="filter-btn active" data-filter="type" data-value="registration">
+          <span class="dot registration"></span>신청
+        </button>
+        <button class="filter-btn active" data-filter="type" data-value="qualification">
+          <span class="dot qualification"></span>예선
+        </button>
+        <button class="filter-btn active" data-filter="type" data-value="finals">
+          <span class="dot finals"></span>본선
+        </button>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">유형</span>
+        <button class="filter-btn active" data-filter="eventtype" data-value="student">
+          <span class="dot student"></span>학생
+        </button>
+        <button class="filter-btn active" data-filter="eventtype" data-value="amateur">
+          <span class="dot amateur"></span>아마추어
+        </button>
+        <button class="filter-btn active" data-filter="eventtype" data-value="open">
+          <span class="dot open-type"></span>오픈
+        </button>
+      </div>
+      <div class="filter-group">
+        <button class="btn-add" id="btnAddCustom">+ 일정 추가</button>
+      </div>
+    </div>
+
+    <!-- Calendar -->
+    <div class="calendar">
+      <div class="calendar-weekdays">
+        <div class="weekday sun">일</div>
+        <div class="weekday">월</div>
+        <div class="weekday">화</div>
+        <div class="weekday">수</div>
+        <div class="weekday">목</div>
+        <div class="weekday">금</div>
+        <div class="weekday sat">토</div>
+      </div>
+      <div class="calendar-grid" id="calendarGrid"></div>
+    </div>
+
+    <!-- Day Detail Panel -->
+    <div class="day-detail hidden" id="dayDetail">
+      <div class="day-detail-header">
+        <h3 class="day-detail-title" id="dayDetailTitle"></h3>
+        <button class="close-btn" id="dayDetailClose">✕</button>
+      </div>
+      <div id="dayDetailContent"></div>
+    </div>
+
+    <!-- Upcoming Section -->
+    <div class="upcoming-section" id="upcomingSection">
+      <h3 class="upcoming-title">
+        <span>📋</span> 다가오는 일정
+        <span class="upcoming-year-badge" id="upcomingYearBadge"></span>
+      </h3>
+      <div id="upcomingList"></div>
+    </div>
+
+  </div>
+
+  <!-- Tournament Detail Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <button class="close-btn" id="modalClose">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Notification Panel -->
+  <div class="side-panel" id="notifPanel">
+    <div class="side-panel-header">
+      <h3>🔔 알림 설정</h3>
+      <button class="close-btn" id="notifPanelClose">✕</button>
+    </div>
+    <div id="notifPanelContent"></div>
+  </div>
+
+  <!-- Data Sources Panel -->
+  <div class="side-panel" id="sourcesPanel">
+    <div class="side-panel-header">
+      <h3>🔗 데이터 소스</h3>
+      <button class="close-btn" id="sourcesPanelClose">✕</button>
+    </div>
+    <div class="sources-content">
+      <p class="sources-desc">아래 사이트에서 최신 일정을 확인하고 캘린더를 업데이트하세요.</p>
+      <div class="source-item">
+        <div class="source-name">
+          <span class="dot kga"></span>
+          <strong>대한골프협회 (KGA)</strong>
+        </div>
+        <a href="https://www.kgagolf.or.kr/web/elite/schedule" target="_blank" rel="noopener" class="source-link">
+          일정 확인하기 →
+        </a>
+      </div>
+      <div class="source-item">
+        <div class="source-name">
+          <span class="dot kjga"></span>
+          <strong>중고골프연맹 (KJGA)</strong>
+        </div>
+        <a href="http://www.kjga.or.kr/n_Public/s24.asp" target="_blank" rel="noopener" class="source-link">
+          일정 확인하기 →
+        </a>
+        <p class="source-note">⚠️ 사이트가 간헐적으로 접속 불가할 수 있습니다</p>
+      </div>
+      <div class="source-item">
+        <div class="source-name">
+          <span class="dot chungnam"></span>
+          <strong>충남골프협회</strong>
+        </div>
+        <a href="https://041-634-6821.kweb114.co.kr/m/sub.html?mc=5215&mo=1&mn=4878&ms=4877" target="_blank" rel="noopener" class="source-link">
+          일정 확인하기 →
+        </a>
+      </div>
+      <div class="source-divider"></div>
+      <p class="sources-desc">
+        <strong>데이터 업데이트 방법:</strong><br>
+        위 사이트에서 새 일정 확인 → <code>data/tournaments.json</code> 파일 수정 → 사이트 재배포 → 🔄 새로고침 버튼 클릭
+      </p>
+    </div>
+  </div>
+
+  <!-- Settings Modal -->
+  <div class="modal-overlay" id="settingsModalOverlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title">⚙️ 설정 및 관리</h2>
+        <button class="close-btn" id="settingsClose">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="settings-tabs">
+          <button class="settings-tab active" data-tab="theme">테마</button>
+          <button class="settings-tab" data-tab="tournaments">대회 관리</button>
+          <button class="settings-tab" data-tab="data">데이터</button>
+        </div>
+
+        <!-- Theme Panel -->
+        <div class="settings-panel active" id="panel-theme">
+          <h3 class="settings-subtitle">대회 구분 색상</h3>
+          <p class="settings-desc">대회별 스트라이프 색상 (최대 4개 순환)</p>
+          <div class="color-grid">
+            <div class="color-item"><label>색상 1</label><input type="color" id="colorTour0" value="#38bdf8"></div>
+            <div class="color-item"><label>색상 2</label><input type="color" id="colorTour1" value="#fb923c"></div>
+            <div class="color-item"><label>색상 3</label><input type="color" id="colorTour2" value="#f472b6"></div>
+            <div class="color-item"><label>색상 4</label><input type="color" id="colorTour3" value="#2dd4bf"></div>
+          </div>
+          <h3 class="settings-subtitle" style="margin-top:20px;">일정 단계별 색상</h3>
+          <div class="color-grid">
+            <div class="color-item"><label>신청</label><input type="color" id="colorReg" value="#16a34a"></div>
+            <div class="color-item"><label>예선</label><input type="color" id="colorQual" value="#ca8a04"></div>
+            <div class="color-item"><label>본선</label><input type="color" id="colorFinal" value="#dc2626"></div>
+            <div class="color-item"><label>연습</label><input type="color" id="colorPractice" value="#6366f1"></div>
+          </div>
+          <button class="btn-save" id="btnSaveTheme">색상 설정 저장</button>
+        </div>
+
+        <!-- Tournament Management Panel -->
+        <div class="settings-panel" id="panel-tournaments">
+          <div class="admin-toolbar">
+            <button class="btn-add" id="btnAdminAddTour">+ 새 대회 추가</button>
+            <input type="text" id="adminTourSearch" placeholder="대회명 검색..." class="admin-search">
+          </div>
+          <div class="admin-tour-list" id="adminTourList"></div>
+        </div>
+
+        <!-- Data Panel -->
+        <div class="settings-panel" id="panel-data">
+          <div class="data-actions">
+            <div class="data-action">
+              <h4>데이터 내보내기</h4>
+              <p>현재 모든 대회 데이터를 JSON 파일로 저장합니다.</p>
+              <button class="btn-data" id="btnExportJson">📥 JSON 내보내기</button>
+            </div>
+            <hr class="divider">
+            <div class="data-action">
+              <h4>모든 설정 초기화</h4>
+              <p>신청 표시, 알림 설정, 개인 일정을 모두 초기화합니다.</p>
+              <button class="btn-data danger" id="btnResetAll">⚠️ 초기화</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Event Modal -->
+  <div class="modal-overlay" id="customEventModalOverlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title">+ 개인 일정 추가</h2>
+        <button class="close-btn" id="customEventClose">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="customEventForm" class="custom-form">
+          <div class="form-group">
+            <label>일정명</label>
+            <input type="text" id="ceName" required placeholder="예: 개인 연습 라운딩">
+          </div>
+          <div class="form-group">
+            <label>분류</label>
+            <select id="ceType">
+              <option value="finals">본선 (주 일정)</option>
+              <option value="qualification">예선</option>
+              <option value="registration">신청</option>
+              <option value="practice">연습라운딩</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>시작일</label>
+              <input type="date" id="ceStart" required>
+            </div>
+            <div class="form-group">
+              <label>종료일</label>
+              <input type="date" id="ceEnd" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>장소</label>
+            <input type="text" id="ceVenue" placeholder="선택사항">
+          </div>
+          <button type="submit" class="btn-submit">추가하기</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

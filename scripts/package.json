@@ -1,0 +1,13 @@
+{
+  "name": "golf-scraper",
+  "version": "1.0.0",
+  "description": "KGA / KJGA / 충남골프협회 대회 일정 스크래퍼",
+  "main": "scraper.js",
+  "scripts": {
+    "scrape": "node scraper.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0"
+  }
+}

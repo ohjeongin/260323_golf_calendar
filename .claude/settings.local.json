@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx surge:*)",
+      "Bash(npm install:*)",
+      "Bash(cmd.exe /c \"node --version && npm --version\")",
+      "Bash(powershell.exe -Command \"node --version\")",
+      "Bash(cmd.exe /c \"node --version 2>&1\")",
+      "Bash(cmd.exe /c \"where node\")",
+      "Bash(cmd.exe /c \"where surge\")",
+      "Read(//mnt/c/Users/PR02/AppData/Roaming/**)",
+      "Read(//mnt/c/Users/PR02/AppData/Roaming/npm/**)",
+      "Read(//mnt/c/Users/**)",
+      "Bash(powershell.exe -Command \"Get-Command node,surge,npm -ErrorAction SilentlyContinue | Select-Object Name,Source\")",
+      "Read(//c/Users/PR02/AppData/Roaming/**)",
+      "Read(//c/Users/PR02/AppData/Local/**)",
+      "Read(//c/Users/PR02/AppData/**)",
+      "Bash(find ~/AppData/Local/npm-cache/_npx/ -name surge*)",
+      "Read(//usr/local/bin/**)",
+      "Read(//usr/bin/**)",
+      "Read(//dev/**)",
+      "Bash(export PATH=\"/c/Program Files/nodejs:$PATH\")",
+      "Bash(export PATH=\"/c/Program Files/nodejs:$PATH\" npm install -g surge)"
+    ]
+  }
+}

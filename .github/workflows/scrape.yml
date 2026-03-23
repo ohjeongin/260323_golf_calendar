@@ -1,0 +1,56 @@
+name: 골프 대회 일정 자동 업데이트
+
+on:
+  schedule:
+    # 매일 새벽 2시 KST = 17:00 UTC
+    - cron: '0 17 * * *'
+  workflow_dispatch: # 수동 실행 버튼
+    inputs:
+      force:
+        description: '강제 업데이트'
+        required: false
+        default: 'false'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 코드 체크아웃
+        uses: actions/checkout@v4
+
+      - name: Node.js 설치
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 스크래퍼 의존성 설치
+        working-directory: scripts
+        run: npm install
+
+      - name: 대회 일정 스크래핑
+        working-directory: scripts
+        run: node scraper.js
+
+      - name: 변경사항 확인
+        id: check
+        run: |
+          if git diff --quiet data/tournaments.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "변경 없음"
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "데이터 변경 감지!"
+            git diff --stat data/tournaments.json
+          fi
+
+      - name: 변경사항 커밋 & 푸시
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "golf-scraper[bot]"
+          git config user.email "golf-scraper@noreply"
+          git add data/tournaments.json
+          git commit -m "🏌️ 대회 일정 자동 업데이트 $(date +'%Y-%m-%d %H:%M KST')"
+          git push
