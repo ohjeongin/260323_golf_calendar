@@ -230,6 +230,162 @@
     "url": "https://041-634-6821.kweb114.co.kr/m/sub.html?mc=5215&mo=1&mn=4878&ms=4877"
   },
   {
+    "id": "kjga-2026-1774287909622-6ysy",
+    "name": "제13회 한국C&T배 전국중·고등학생골프대회 안내",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-24",
+        "end": "2026-03-24"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=688&page=1&news_s=&find="
+  },
+  {
+    "id": "kjga-2026-1774287910216-3x9n",
+    "name": "2026 두산연강 골프꿈나무 장학생 선발 안내",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-24",
+        "end": "2026-03-24"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=687&page=1&news_s=&find="
+  },
+  {
+    "id": "kjga-2026-1774287910944-jocn",
+    "name": "2026 스릭슨배 안내문, 로컬룰 및 거리표",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-24",
+        "end": "2026-03-24"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=685&page=1&news_s=&find="
+  },
+  {
+    "id": "kjga-2026-1774287911584-qeef",
+    "name": "2026 스릭슨배 전국중·고등학생골프대회 안내",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-24",
+        "end": "2026-03-24"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=683&page=1&news_s=&find="
+  },
+  {
+    "id": "kjga-2026-1774287912191-db9z",
+    "name": "2026년도 무안cc대회 남고/남중부 셀프라운드 안내",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-24",
+        "end": "2026-03-24"
+      },
+      "practice": null
+    },
+    "venue": "물품은 골프장",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=682&page=1&news_s=&find="
+  },
+  {
+    "id": "kjga-2026-1774287912886-qjlb",
+    "name": "2026 골프규칙교실 안내",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-23",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-24",
+        "end": "2026-03-24"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=680&page=1&news_s=&find="
+  },
+  {
     "id": "kga-2026-1762",
     "name": "제4회 임실치즈배 아마추어골프선수권대회",
     "association": "KGA",
