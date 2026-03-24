@@ -215,7 +215,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -386,13 +386,169 @@
     "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=680&page=1&news_s=&find="
   },
   {
+    "id": "kjga-2026-1774374644522-dxai",
+    "name": "제13회 한국C&T배 전국중·고등학생골프대회 안내",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-24",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-25",
+        "end": "2026-03-25"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=688&page=1&news_s=&find="
+  },
+  {
+    "id": "kjga-2026-1774374645226-b96i",
+    "name": "2026 두산연강 골프꿈나무 장학생 선발 안내",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-24",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-25",
+        "end": "2026-03-25"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=687&page=1&news_s=&find="
+  },
+  {
+    "id": "kjga-2026-1774374645907-d9nn",
+    "name": "2026 스릭슨배 안내문, 로컬룰 및 거리표",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-24",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-25",
+        "end": "2026-03-25"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=685&page=1&news_s=&find="
+  },
+  {
+    "id": "kjga-2026-1774374646533-uli3",
+    "name": "2026 스릭슨배 전국중·고등학생골프대회 안내",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-24",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-25",
+        "end": "2026-03-25"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=683&page=1&news_s=&find="
+  },
+  {
+    "id": "kjga-2026-1774374647229-ne99",
+    "name": "2026년도 무안cc대회 남고/남중부 셀프라운드 안내",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-24",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-25",
+        "end": "2026-03-25"
+      },
+      "practice": null
+    },
+    "venue": "물품은 골프장",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=682&page=1&news_s=&find="
+  },
+  {
+    "id": "kjga-2026-1774374647860-bpj1",
+    "name": "2026 골프규칙교실 안내",
+    "association": "KJGA",
+    "type": "student",
+    "year": 2026,
+    "verified": true,
+    "lastVerified": "2026-03-24",
+    "dates": {
+      "registration": null,
+      "qualification": null,
+      "finals": {
+        "start": "2026-03-25",
+        "end": "2026-03-25"
+      },
+      "practice": null
+    },
+    "venue": "미정",
+    "categories": [
+      "남자 고등부",
+      "남자 중등부",
+      "여자 고등부",
+      "여자 중등부"
+    ],
+    "url": "http://www.kjga.or.kr/n_Public/s24_view.asp?num=680&page=1&news_s=&find="
+  },
+  {
     "id": "kga-2026-1762",
     "name": "제4회 임실치즈배 아마추어골프선수권대회",
     "association": "KGA",
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -413,7 +569,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -434,7 +590,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -455,7 +611,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -476,7 +632,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -497,7 +653,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -518,7 +674,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -539,7 +695,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -560,7 +716,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -581,7 +737,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -631,7 +787,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -652,7 +808,7 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -673,7 +829,7 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -694,7 +850,7 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -715,7 +871,7 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -736,7 +892,7 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -757,7 +913,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -801,7 +957,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -872,7 +1028,7 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -893,7 +1049,7 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -914,7 +1070,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -935,7 +1091,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -956,7 +1112,7 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1005,7 +1161,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1049,7 +1205,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1070,7 +1226,7 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1091,7 +1247,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1112,7 +1268,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1133,7 +1289,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1154,7 +1310,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1175,7 +1331,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1196,7 +1352,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -1217,7 +1373,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": {
@@ -1238,7 +1394,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1259,7 +1415,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1306,7 +1462,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1352,7 +1508,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1396,7 +1552,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1473,7 +1629,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1494,7 +1650,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1515,7 +1671,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1536,7 +1692,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1557,7 +1713,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -1578,7 +1734,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-03-23",
+    "lastVerified": "2026-03-24",
     "dates": {
       "registration": null,
       "qualification": null,
