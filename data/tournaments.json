@@ -67,7 +67,8 @@
         "start": "2026-03-30",
         "end": "2026-04-03"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "전주샹그릴라",
     "categories": [],
@@ -94,6 +95,10 @@
       "practice": {
         "start": "2026-04-06",
         "end": "2026-04-06"
+      },
+      "practiceRegistration": {
+        "start": "2026-04-04",
+        "end": "2026-04-04"
       }
     },
     "venue": "전주샹그릴라",
@@ -147,7 +152,8 @@
         "start": "2026-04-20",
         "end": "2026-04-24"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "라비에벨 듄스",
     "categories": [],
@@ -171,7 +177,8 @@
         "start": "2026-04-27",
         "end": "2026-04-27"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "골드레이크",
     "categories": [],
@@ -216,6 +223,10 @@
       "practice": {
         "start": "2026-04-29",
         "end": "2026-04-29"
+      },
+      "practiceRegistration": {
+        "start": "2026-04-20",
+        "end": "2026-04-20"
       }
     },
     "venue": "남서울",
@@ -240,7 +251,8 @@
         "start": "2026-05-11",
         "end": "2026-05-12"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "라비에벨 듄스",
     "categories": [],
@@ -261,7 +273,8 @@
         "start": "2026-05-12",
         "end": "2026-05-15"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "골드레이크",
     "categories": [],
@@ -282,7 +295,8 @@
         "start": "2026-05-19",
         "end": "2026-05-21"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "골드레이크",
     "categories": [],
@@ -306,7 +320,8 @@
         "start": "2026-05-21",
         "end": "2026-05-24"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "우정힐스",
     "categories": [],
@@ -327,7 +342,8 @@
         "start": "2026-05-25",
         "end": "2026-05-26"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "고성노벨",
     "categories": [],
@@ -369,7 +385,8 @@
         "start": "2026-06-11",
         "end": "2026-06-14"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "레이크우드",
     "categories": [],
@@ -390,7 +407,8 @@
         "start": "2026-06-23",
         "end": "2026-06-26"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "더플레이어스",
     "categories": [],
@@ -411,7 +429,8 @@
         "start": "2026-06-30",
         "end": "2026-07-03"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "베어크리크 포천",
     "categories": [],
@@ -432,7 +451,8 @@
         "start": "2026-07-09",
         "end": "2026-07-10"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "미정",
     "categories": [],
@@ -453,7 +473,8 @@
         "start": "2026-07-14",
         "end": "2026-07-17"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "고창",
     "categories": [],
@@ -474,7 +495,8 @@
         "start": "2026-07-22",
         "end": "2026-07-24"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "블루원용인",
     "categories": [],
@@ -495,7 +517,8 @@
         "start": "2026-07-23",
         "end": "2026-07-24"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "대구",
     "categories": [],
@@ -516,7 +539,8 @@
         "start": "2026-08-04",
         "end": "2026-08-06"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "미정",
     "categories": [],
@@ -537,7 +561,8 @@
         "start": "2026-08-11",
         "end": "2026-08-14"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "대구",
     "categories": [],
@@ -558,7 +583,8 @@
         "start": "2026-08-25",
         "end": "2026-08-28"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "서원밸리",
     "categories": [],
@@ -579,7 +605,8 @@
         "start": "2026-09-01",
         "end": "2026-09-04"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "유성",
     "categories": [],
@@ -621,7 +648,8 @@
         "start": "2026-09-08",
         "end": "2026-09-11"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "남서울",
     "categories": [],
@@ -642,7 +670,8 @@
         "start": "2026-09-15",
         "end": "2026-09-18"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "드림파크",
     "categories": [],
@@ -663,7 +692,8 @@
         "start": "2026-09-30",
         "end": "2026-10-02"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "센추리21",
     "categories": [],
@@ -684,7 +714,8 @@
         "start": "2026-10-19",
         "end": "2026-10-22"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "미정",
     "categories": [],
@@ -705,7 +736,8 @@
         "start": "2026-10-26",
         "end": "2026-10-30"
       },
-      "practice": null
+      "practice": null,
+      "practiceRegistration": null
     },
     "venue": "미정",
     "categories": [],

@@ -277,7 +277,8 @@ async function scrapeKGA(year = CURRENT_YEAR) {
                 registration: t.registration,
                 qualification: null,
                 finals: t.period,
-                practice: t.practice || null
+                practice: t.practice || null,
+                practiceRegistration: t.practiceRegStart ? { start: t.practiceRegStart, end: t.practiceRegStart } : null
             },
             venue: t.venue,
             categories: [],

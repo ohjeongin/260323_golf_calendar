@@ -86,6 +86,7 @@ class Calendar {
                 { type: 'registration', label: '신청', dates: t.dates.registration },
                 { type: 'qualification', label: '예선', dates: t.dates.qualification },
                 { type: 'finals', label: '본선', dates: t.dates.finals },
+                { type: 'registration', label: '신청-공식연습', dates: t.dates.practiceRegistration },
                 { type: 'practice', label: '공식연습', dates: t.dates.practice }
             ];
             for (const ph of phases) {
@@ -243,11 +244,12 @@ class Calendar {
     }
 
     _makeLabel(phase, name) {
-        // phase: 신청/예선/본선/연습
+        // phase: 신청/예선/본선/공식연습
         // name: "임실치즈배 (예선)", "한국오픈 (1차 예선)", "임실치즈배" (본선)
+        if (phase === '공식연습') return '[공식연습]';
+        if (phase === '신청-공식연습') return '[신청-공식연습]';
         const stageMatch = name.match(/\((1차\s*예선|최종\s*예선|예선)\)$/);
         const stage = stageMatch ? stageMatch[1].replace(/\s/g, '') : '본선';
-        // [신청-예선], [본선-1차예선], [신청-본선] 등
         return `[${phase}-${stage}]`;
     }
 
