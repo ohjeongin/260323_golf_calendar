@@ -224,7 +224,42 @@ async function scrapeKGA(year = CURRENT_YEAR) {
         console.error('[KGA] applyList 오류:', e.message);
     }
 
-    // --- 3단계: 결과 변환 ---
+    // --- 3단계: 본선 대회의 공식연습 일정 수집 ---
+    for (const [groupKey, t] of stageMap) {
+        if (t.stage !== '본선') continue; // 본선만 공식연습이 있음
+        try {
+            const code = t.codes[0];
+            const resp = await http.get(
+                `https://www.kgagolf.or.kr/web/elite/tour/practice?tournamentCode=${code}`
+            );
+            const html = resp.data;
+
+            // praticeStartDateStr 추출
+            const startMatch = html.match(/praticeStartDateStr\s*=\s*"(\d{8})/);
+            // select 옵션에서 연습일 추출
+            const dateOpts = [...html.matchAll(/<option[^>]*value="(\d{8})"[\s\S]*?<\/option>/g)];
+            const practiceDates = dateOpts.map(m => m[1]).sort();
+
+            if (practiceDates.length > 0) {
+                const first = toDateStr(practiceDates[0]);
+                const last = toDateStr(practiceDates[practiceDates.length - 1]);
+                t.practice = { start: first, end: last };
+                // 공식연습 신청 시작일 (praticeStartDate)
+                if (startMatch) {
+                    t.practiceRegStart = toDateStr(startMatch[1]);
+                }
+                console.log(`[KGA] 공식연습: ${t.baseName} | ${first} ~ ${last}`);
+            } else if (startMatch) {
+                // 연습일은 미정이지만 신청 시작일은 있음
+                t.practiceRegStart = toDateStr(startMatch[1]);
+            }
+
+            await sleep(200);
+        } catch {}
+    }
+    console.log(`[KGA] 공식연습 수집 완료`);
+
+    // --- 4단계: 결과 변환 ---
     const results = [];
     for (const [groupKey, t] of stageMap) {
         const displayName = t.stage === '본선' ? t.baseName : `${t.baseName} (${t.stage})`;
@@ -242,7 +277,7 @@ async function scrapeKGA(year = CURRENT_YEAR) {
                 registration: t.registration,
                 qualification: null,
                 finals: t.period,
-                practice: null
+                practice: t.practice || null
             },
             venue: t.venue,
             categories: [],
