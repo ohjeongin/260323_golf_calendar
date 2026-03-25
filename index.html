@@ -33,6 +33,9 @@
       <div class="header-right">
         <button class="btn-icon" id="btnSources" title="데이터 소스 확인">🔗</button>
         <button class="btn-icon" id="btnSettings" title="설정">⚙️</button>
+        <button class="btn-icon" id="btnChangeLog" title="변경 내역">
+          📋<span class="badge hidden" id="changeLogBadge">0</span>
+        </button>
         <button class="btn-icon" id="btnNotification" title="알림">
           🔔<span class="badge hidden" id="notifBadge">0</span>
         </button>
@@ -296,6 +299,18 @@
           </div>
           <button type="submit" class="btn-submit">추가하기</button>
         </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Change Log Modal -->
+  <div class="modal-overlay" id="changeLogModalOverlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title">📋 변경 내역</h2>
+        <button class="close-btn" id="changeLogClose">✕</button>
+      </div>
+      <div class="modal-body" id="changeLogBody" style="max-height:60vh;overflow-y:auto;">
       </div>
     </div>
   </div>

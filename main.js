@@ -62,12 +62,25 @@ class App {
                 this._updateTimeDisplay();
                 const changes = this.tm.lastChanges || [];
                 if (changes.length > 0) {
-                    showToast(`🔔 ${changes.length}건 변경 감지! 알림 아이콘에서 확인하세요.`, 'success');
+                    showToast(`🔔 ${changes.length}건 변경 감지! 📋 아이콘에서 확인하세요.`, 'success');
                     this._updateBadge();
+                    this._updateChangeLogBadge();
                 } else {
                     showToast('최신 상태입니다. 변경사항 없음.', 'success');
                 }
             }, 600);
+        });
+
+        // 변경 내역 모달
+        document.getElementById('btnChangeLog').addEventListener('click', () => {
+            this._renderChangeLogModal();
+            document.getElementById('changeLogModalOverlay').classList.add('active');
+        });
+        document.getElementById('changeLogClose').addEventListener('click', () => {
+            document.getElementById('changeLogModalOverlay').classList.remove('active');
+        });
+        document.getElementById('changeLogModalOverlay').addEventListener('click', (e) => {
+            if (e.target.id === 'changeLogModalOverlay') e.target.classList.remove('active');
         });
 
         // 년도 네비게이션
@@ -459,6 +472,67 @@ class App {
         this.calendar.render();
         this._renderUpcoming();
         this._updateBadge();
+        this._updateChangeLogBadge();
+    }
+
+    _renderChangeLogModal() {
+        const body = document.getElementById('changeLogBody');
+        const log = this.tm.getChangeLog();
+
+        if (log.length === 0) {
+            body.innerHTML = '<div style="text-align:center;padding:32px;color:var(--text-tertiary)">변경 내역이 없습니다.<br><br>새로고침 버튼(↻)을 누르면<br>이전 데이터와 비교하여 변경사항을 감지합니다.</div>';
+            return;
+        }
+
+        // 날짜별 그룹핑
+        const grouped = {};
+        for (const entry of log) {
+            const d = new Date(entry.time);
+            const dateKey = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+            if (!grouped[dateKey]) grouped[dateKey] = [];
+            grouped[dateKey].push(entry);
+        }
+
+        let html = '';
+        for (const [date, entries] of Object.entries(grouped)) {
+            const d = new Date(date);
+            html += `<div style="font-weight:700;font-size:14px;margin:16px 0 8px;color:var(--text-primary)">${d.getMonth()+1}월 ${d.getDate()}일</div>`;
+            for (const entry of entries) {
+                const icon = entry.type === 'added' ? '🆕' : entry.type === 'removed' ? '🗑️' : '✏️';
+                const t = new Date(entry.time);
+                const timeStr = `${t.getHours()}:${String(t.getMinutes()).padStart(2,'0')}`;
+                html += `
+                <div style="padding:8px 12px;margin:4px 0;background:var(--bg-secondary);border-radius:8px;font-size:13px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                        <span style="font-weight:600">${icon} ${entry.name}</span>
+                        <span style="font-size:11px;color:var(--text-tertiary)">${timeStr}</span>
+                    </div>
+                    <div style="color:var(--text-secondary);margin-top:4px;font-size:12px">${entry.detail}</div>
+                </div>`;
+            }
+        }
+
+        html += `<div style="text-align:center;margin-top:16px">
+            <button id="btnClearLog" style="padding:8px 16px;border:1px solid var(--border);border-radius:8px;background:none;color:var(--text-secondary);cursor:pointer;font-size:12px">로그 초기화</button>
+        </div>`;
+
+        body.innerHTML = html;
+
+        document.getElementById('btnClearLog')?.addEventListener('click', () => {
+            localStorage.removeItem('golf-change-log');
+            this._renderChangeLogModal();
+            this._updateChangeLogBadge();
+            showToast('변경 로그가 초기화되었습니다.');
+        });
+    }
+
+    _updateChangeLogBadge() {
+        const badge = document.getElementById('changeLogBadge');
+        const log = this.tm.getChangeLog();
+        const oneDayAgo = Date.now() - 24 * 60 * 60 * 1000;
+        const count = log.filter(c => new Date(c.time).getTime() > oneDayAgo).length;
+        badge.textContent = count;
+        badge.classList.toggle('hidden', count === 0);
     }
 
     _fmtShort(dateStr) {
