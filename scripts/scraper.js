@@ -214,8 +214,17 @@ async function scrapeKGA(year = CURRENT_YEAR) {
         console.error('[KGA] applyList 오류:', e.message);
     }
 
-    // --- 3단계: 같은 대회명 그룹핑 (예선 A/B/C/D 등을 하나로 병합) ---
-    const nameMap = new Map(); // cleanName → merged tournament
+    // --- 3단계: 같은 대회명 그룹핑 (예선 A/B/C/D/E, 남/여, 1차/최종 등을 하나로 병합) ---
+    function mergeDateRange(existing, incoming) {
+        if (!incoming) return existing;
+        if (!existing) return { ...incoming };
+        return {
+            start: incoming.start < existing.start ? incoming.start : existing.start,
+            end: incoming.end > existing.end ? incoming.end : existing.end
+        };
+    }
+
+    const nameMap = new Map();
     for (const [code, t] of tourMap) {
         const baseName = t.name;
         if (!nameMap.has(baseName)) {
@@ -223,34 +232,19 @@ async function scrapeKGA(year = CURRENT_YEAR) {
         } else {
             const merged = nameMap.get(baseName);
             merged.codes.push(code);
-
-            // 날짜 범위 확장
-            if (t.registration) {
-                if (!merged.registration) {
-                    merged.registration = { ...t.registration };
-                } else {
-                    if (t.registration.start < merged.registration.start) merged.registration.start = t.registration.start;
-                    if (t.registration.end > merged.registration.end) merged.registration.end = t.registration.end;
-                }
-            }
-            if (t.qualification) {
-                if (!merged.qualification) {
-                    merged.qualification = { ...t.qualification };
-                } else {
-                    if (t.qualification.start < merged.qualification.start) merged.qualification.start = t.qualification.start;
-                    if (t.qualification.end > merged.qualification.end) merged.qualification.end = t.qualification.end;
-                }
-            }
-            if (t.finals) {
-                if (!merged.finals) {
-                    merged.finals = { ...t.finals };
-                } else {
-                    if (t.finals.start < merged.finals.start) merged.finals.start = t.finals.start;
-                    if (t.finals.end > merged.finals.end) merged.finals.end = t.finals.end;
-                }
-            }
+            merged.registration = mergeDateRange(merged.registration, t.registration);
+            merged.qualification = mergeDateRange(merged.qualification, t.qualification);
+            merged.finals = mergeDateRange(merged.finals, t.finals);
+            // 더 긴 이름 우선
+            if (t.name.length > merged.name.length) merged.name = t.name;
+            // venue가 미정이 아닌 것 우선
+            if (merged.venue === '미정' && t.venue !== '미정') merged.venue = t.venue;
         }
     }
+
+    // 추가 그룹핑: 같은 대회의 1차 예선/최종 예선/본선이 이름이 약간 다를 수 있음
+    // 예: "한국오픈골프선수권대회(1차 예선전)" vs "한국오픈골프선수권대회"
+    // 이미 cleanName에서 제거했으므로 여기서는 nameMap이 정확해야 함
 
     // 결과 변환
     const results = [];
