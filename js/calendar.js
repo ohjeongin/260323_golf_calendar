@@ -86,7 +86,7 @@ class Calendar {
                 { type: 'registration', label: '신청', dates: t.dates.registration },
                 { type: 'qualification', label: '예선', dates: t.dates.qualification },
                 { type: 'finals', label: '본선', dates: t.dates.finals },
-                { type: 'practice', label: '연습', dates: t.dates.practice }
+                { type: 'practice', label: '공식연습', dates: t.dates.practice }
             ];
             for (const ph of phases) {
                 if (!ph.dates || !this.manager.filters.types.has(ph.type)) continue;
@@ -213,8 +213,7 @@ class Calendar {
                 bar.style.gridColumn = `${p.startCol + 1} / ${p.endCol + 2}`;
                 bar.style.backgroundColor = p.color;
                 const isReg = this.manager.isRegistered(p.tournament.id);
-                const stageTag = this._stageTag(p.tournament.name);
-                const displayLabel = stageTag ? `${p.label}(${stageTag})` : p.label;
+                const displayLabel = this._makeLabel(p.label, p.tournament.name);
                 bar.textContent = `${isReg ? '✅ ' : ''}${displayLabel} ${p.name}`;
                 bar.title = `${p.tournament.name} — ${p.label} ${this._fmtShort(p.startDate)}~${this._fmtShort(p.endDate)}`;
                 bar.addEventListener('click', e => {
@@ -243,11 +242,13 @@ class Calendar {
         return s.length > 12 ? s.substring(0, 11) + '…' : s;
     }
 
-    _stageTag(name) {
-        // 대회명에서 단계 추출: "(1차 예선)" → "1차예선", "(예선)" → "예선"
-        const m = name.match(/\((1차\s*예선|최종\s*예선|예선)\)$/);
-        if (m) return m[1].replace(/\s/g, '');
-        return '';
+    _makeLabel(phase, name) {
+        // phase: 신청/예선/본선/연습
+        // name: "임실치즈배 (예선)", "한국오픈 (1차 예선)", "임실치즈배" (본선)
+        const stageMatch = name.match(/\((1차\s*예선|최종\s*예선|예선)\)$/);
+        const stage = stageMatch ? stageMatch[1].replace(/\s/g, '') : '본선';
+        // [신청-예선], [본선-1차예선], [신청-본선] 등
+        return `[${phase}-${stage}]`;
     }
 
     _fmtShort(dateStr) {
