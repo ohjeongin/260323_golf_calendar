@@ -1,7 +1,7 @@
 // Golf Calendar — Main Application Entry Point
 
 import TournamentManager from './js/tournament.js';
-import Calendar, { getTournamentColor } from './js/calendar.js';
+import Calendar, { PHASE_COLORS } from './js/calendar.js';
 import Modal from './js/modal.js';
 import NotificationManager, { showToast } from './js/notification.js';
 
@@ -334,7 +334,7 @@ class App {
         const typeClass = t.type === 'student' ? 'student' : t.type === 'open' ? 'open' : 'amateur';
         const typeLabel = t.type === 'student' ? '학생' : t.type === 'open' ? '오픈' : t.isCustom ? '개인' : '아마추어';
         const isReg = this.tm.isRegistered(t.id);
-        const color = getTournamentColor(t, this.tm.tournaments);
+        const color = t.isCustom ? PHASE_COLORS.custom : PHASE_COLORS.finals;
 
         const tags = [];
         if (t.dates.registration) tags.push(`<span class="date-tag registration">신청 ${this._fmtShort(t.dates.registration.start)}~${this._fmtShort(t.dates.registration.end)}</span>`);
@@ -403,7 +403,7 @@ class App {
             const assocClass = t.association === 'KGA' ? 'kga' : t.association === 'KJGA' ? 'kjga' : t.association === '충남' ? 'chungnam' : 'custom';
             const typeClass = t.type === 'student' ? 'student' : t.type === 'open' ? 'open' : 'amateur';
             const isReg = this.tm.isRegistered(t.id);
-            const color = getTournamentColor(t, this.tm.tournaments);
+            const color = t.isCustom ? PHASE_COLORS.custom : PHASE_COLORS.finals;
             const dLabel = item.daysUntil === 0 ? '오늘' : item.daysUntil === 1 ? '내일' : `D-${item.daysUntil}`;
 
             return `

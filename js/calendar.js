@@ -1,19 +1,13 @@
 // Calendar Renderer — Week-Row Based with Spanning Event Bars
 
-const TOUR_COLORS = ['#38bdf8', '#fb923c', '#f472b6', '#2dd4bf'];
-const USER_COLOR_KEY = 'golf-tour-colors';
-
-function getTournamentColor(tournament, allTournaments) {
-    if (tournament.isCustom) return '#64748b';
-    // Custom colors from settings
-    let colors = TOUR_COLORS;
-    try {
-        const saved = JSON.parse(localStorage.getItem(USER_COLOR_KEY) || 'null');
-        if (saved) colors = saved;
-    } catch {}
-    const idx = allTournaments.filter(t => !t.isCustom).findIndex(t => t.id === tournament.id);
-    return colors[Math.max(idx, 0) % colors.length];
-}
+// 단계(phase)별 고정 색상
+const PHASE_COLORS = {
+    registration: '#16a34a',  // 초록 - 신청
+    qualification: '#ca8a04', // 노랑 - 예선
+    finals: '#dc2626',        // 빨강 - 본선
+    practice: '#2563eb',      // 파랑 - 공식연습
+    custom: '#64748b'          // 회색 - 개인일정
+};
 
 class Calendar {
     constructor(tournamentManager, onDayClick, onEventClick) {
@@ -81,7 +75,6 @@ class Calendar {
         const all = this.manager.tournaments;
         for (const t of all) {
             if (!this.manager._passesFilters(t)) continue;
-            const color = getTournamentColor(t, all);
             const phases = [
                 { type: 'registration', label: '신청', dates: t.dates.registration },
                 { type: 'qualification', label: '예선', dates: t.dates.qualification },
@@ -91,6 +84,7 @@ class Calendar {
             ];
             for (const ph of phases) {
                 if (!ph.dates || !this.manager.filters.types.has(ph.type)) continue;
+                const color = t.isCustom ? PHASE_COLORS.custom : PHASE_COLORS[ph.type];
                 intervals.push({
                     tournament: t, type: ph.type, label: ph.label, color,
                     startDate: ph.dates.start, endDate: ph.dates.end,
@@ -264,4 +258,4 @@ class Calendar {
 }
 
 export default Calendar;
-export { TOUR_COLORS, getTournamentColor };
+export { PHASE_COLORS };
