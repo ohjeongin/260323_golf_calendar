@@ -245,6 +245,8 @@ class Calendar {
         const stageMatch = name.match(/\((1차\s*예선|최종\s*예선|예선)\)$/);
         if (!stageMatch) return `[${phase}]`;
         const stage = stageMatch[1].replace(/\s/g, '');
+        // "본선" phase + 예선 단계 → 단계명만 표시 (기간을 뜻함)
+        if (phase === '본선') return `[${stage}]`;
         return `[${phase}-${stage}]`;
     }
 
