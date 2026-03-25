@@ -483,36 +483,39 @@ async function scrapeKJGA() {
 async function scrapeChungnam() {
     console.log('[충남] 일정 수집 시작...');
     const results = [];
+    const year = CURRENT_YEAR;
 
     try {
         const resp = await http.get(
             'https://041-634-6821.kweb114.co.kr/m/sub.html?mc=5215&mo=1&mn=4878&ms=4877'
         );
         const $ = cheerio.load(resp.data);
-        const fullText = $('body').text();
-        const lines = fullText.split('\n').map(l => l.trim()).filter(Boolean);
 
-        const dateLinePattern = /(\d{2})-(\d{2})(?:~(\d{2}))?\s*[:\s]\s*(.+)/;
-        const year = CURRENT_YEAR;
+        // 테이블 행 파싱: [번호 | 기간 | 대회명 | 장소 | 비고]
+        $('table tr').each((i, el) => {
+            const cells = [];
+            $(el).find('td').each((j, td) => {
+                cells.push($(td).text().trim().replace(/\s+/g, ' '));
+            });
 
-        for (let i = 0; i < lines.length; i++) {
-            const line = lines[i];
-            const m = line.match(dateLinePattern);
-            if (!m) continue;
+            // 최소 4개 셀 (번호, 기간, 대회명, 장소)
+            if (cells.length < 4) return;
+            const [num, period, name, venue] = cells;
 
-            const [, month, startDay, endDay, rest] = m;
-            const startDate = `${year}-${month}-${startDay}`;
-            const endDate = endDay ? `${year}-${month}-${endDay}` : startDate;
+            // 번호가 숫자인 행만 (헤더 제외)
+            if (!/^\d+$/.test(num)) return;
 
-            const nameVenueSplit = rest.split(/[(\（]/);
-            const name = nameVenueSplit[0].replace(/\s*:\s*/, '').trim();
-            const venueMatch = rest.match(/[(\（]([^)）]+)[)）]/);
-            const venue = venueMatch ? venueMatch[1].trim() : '미정';
+            // 기간 파싱: "03-23 03-24" 또는 "06-08 06-08"
+            const dateMatch = period.match(/(\d{2})-(\d{2})\s+(\d{2})-(\d{2})/);
+            if (!dateMatch) return;
 
-            if (!name || name.length < 3) continue;
+            const startDate = `${year}-${dateMatch[1]}-${dateMatch[2]}`;
+            const endDate = `${year}-${dateMatch[3]}-${dateMatch[4]}`;
+
+            if (!name || name.length < 3) return;
 
             results.push({
-                id: `cn-${year}-${month}${startDay}`,
+                id: `cn-${year}-${num.padStart(3, '0')}`,
                 name: name,
                 association: '충남',
                 type: guessType(name),
@@ -525,11 +528,11 @@ async function scrapeChungnam() {
                     finals: { start: startDate, end: endDate },
                     practice: null
                 },
-                venue,
+                venue: venue || '미정',
                 categories: [],
                 url: 'https://041-634-6821.kweb114.co.kr/m/sub.html?mc=5215&mo=1&mn=4878&ms=4877'
             });
-        }
+        });
 
         console.log(`[충남] ${results.length}개 대회 수집 완료`);
     } catch (e) {
