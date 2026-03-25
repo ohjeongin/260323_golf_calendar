@@ -110,6 +110,25 @@ class NotificationManager {
             html += `<div style="text-align:center;padding:24px;color:var(--text-tertiary);font-size:13px;">다가오는 신청 일정이 없습니다.</div>`;
         }
 
+        // 변경 로그
+        const changeLog = this.manager.getChangeLog();
+        if (changeLog.length > 0) {
+            html += `<div class="notif-section">
+                <div class="notif-section-title">📝 업데이트 로그</div>`;
+            for (const entry of changeLog.slice(0, 15)) {
+                const icon = entry.type === 'added' ? '🆕' : entry.type === 'removed' ? '🗑️' : '✏️';
+                const time = new Date(entry.time);
+                const timeStr = `${time.getMonth()+1}/${time.getDate()} ${time.getHours()}:${String(time.getMinutes()).padStart(2,'0')}`;
+                html += `
+                <div class="notification-item">
+                    <div class="notif-item-name">${icon} ${entry.name}</div>
+                    <div class="notif-item-date">${entry.detail}</div>
+                    <div class="notif-item-days" style="font-size:11px;color:var(--text-tertiary)">${timeStr}</div>
+                </div>`;
+            }
+            html += `</div>`;
+        }
+
         // 테스트 알림 버튼
         html += `
         <div class="notif-section" style="margin-top:16px;">
@@ -119,10 +138,15 @@ class NotificationManager {
         return html;
     }
 
-    // 배지 카운트 (D-7 이내 신청 임박 대회 수)
+    // 배지 카운트 (D-7 이내 신청 임박 + 최근 변경사항)
     getBadgeCount() {
         const upcoming = this.manager.getUpcoming(50);
-        return upcoming.filter(item => item.type === 'registration' && item.daysUntil <= 7 && item.daysUntil >= 0).length;
+        const regCount = upcoming.filter(item => item.type === 'registration' && item.daysUntil <= 7 && item.daysUntil >= 0).length;
+        // 최근 24시간 내 변경사항
+        const changeLog = this.manager.getChangeLog();
+        const oneDayAgo = Date.now() - 24 * 60 * 60 * 1000;
+        const recentChanges = changeLog.filter(c => new Date(c.time).getTime() > oneDayAgo).length;
+        return regCount + recentChanges;
     }
 
     _checkOnce() {

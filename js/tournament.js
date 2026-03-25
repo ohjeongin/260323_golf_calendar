@@ -34,13 +34,85 @@ class TournamentManager {
                 return !EXCLUDED_KEYWORDS.some(kw => name.includes(kw.toLowerCase()));
             });
 
+            // 변경사항 감지
+            if (forceRefresh) {
+                this.lastChanges = this._detectChanges(official);
+            }
+
             this.tournaments = [...official, ...this.persistentTournaments, ...this.customEvents];
+
+            // 이전 데이터 캐시 저장
+            try { localStorage.setItem('golf-prev-data', JSON.stringify(official)); } catch {}
+
             return this.tournaments;
         } catch (error) {
             console.error('Failed to load tournament data:', error);
             this.tournaments = [...this.persistentTournaments, ...this.customEvents];
             return this.tournaments;
         }
+    }
+
+    _detectChanges(newData) {
+        const changes = [];
+        let prevData = [];
+        try { prevData = JSON.parse(localStorage.getItem('golf-prev-data') || '[]'); } catch {}
+        if (prevData.length === 0) return changes;
+
+        const prevMap = new Map(prevData.map(t => [t.id, t]));
+        const newMap = new Map(newData.map(t => [t.id, t]));
+        const now = new Date().toISOString();
+
+        // 새로 추가된 대회
+        for (const [id, t] of newMap) {
+            if (!prevMap.has(id)) {
+                changes.push({ type: 'added', name: t.name, detail: '새 대회 추가', time: now });
+            }
+        }
+
+        // 삭제된 대회
+        for (const [id, t] of prevMap) {
+            if (!newMap.has(id)) {
+                changes.push({ type: 'removed', name: t.name, detail: '대회 삭제됨', time: now });
+            }
+        }
+
+        // 변경된 대회
+        for (const [id, newT] of newMap) {
+            const oldT = prevMap.get(id);
+            if (!oldT) continue;
+            const diffs = [];
+            // 날짜 변경 체크
+            for (const phase of ['registration', 'qualification', 'finals', 'practice', 'practiceRegistration']) {
+                const o = oldT.dates?.[phase];
+                const n = newT.dates?.[phase];
+                if (!o && n) diffs.push(`${phase} 일정 추가: ${n.start}~${n.end}`);
+                else if (o && !n) diffs.push(`${phase} 일정 삭제`);
+                else if (o && n && (o.start !== n.start || o.end !== n.end)) {
+                    diffs.push(`${phase} 변경: ${o.start}~${o.end} → ${n.start}~${n.end}`);
+                }
+            }
+            // 장소 변경
+            if (oldT.venue !== newT.venue) diffs.push(`장소 변경: ${oldT.venue} → ${newT.venue}`);
+
+            if (diffs.length > 0) {
+                changes.push({ type: 'changed', name: newT.name, detail: diffs.join(', '), time: now });
+            }
+        }
+
+        // 변경 로그 저장 (최대 50개)
+        if (changes.length > 0) {
+            let log = [];
+            try { log = JSON.parse(localStorage.getItem('golf-change-log') || '[]'); } catch {}
+            log.unshift(...changes);
+            log = log.slice(0, 50);
+            localStorage.setItem('golf-change-log', JSON.stringify(log));
+        }
+
+        return changes;
+    }
+
+    getChangeLog() {
+        try { return JSON.parse(localStorage.getItem('golf-change-log') || '[]'); } catch { return []; }
     }
 
     // 특정 날짜의 이벤트 반환 (현재 필터 적용)

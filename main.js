@@ -60,7 +60,13 @@ class App {
             setTimeout(() => {
                 updateBtn.classList.remove('spinning');
                 this._updateTimeDisplay();
-                showToast('최신 일정으로 업데이트되었습니다.', 'success');
+                const changes = this.tm.lastChanges || [];
+                if (changes.length > 0) {
+                    showToast(`🔔 ${changes.length}건 변경 감지! 알림 아이콘에서 확인하세요.`, 'success');
+                    this._updateBadge();
+                } else {
+                    showToast('최신 상태입니다. 변경사항 없음.', 'success');
+                }
             }, 600);
         });
 
