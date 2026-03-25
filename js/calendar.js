@@ -213,7 +213,9 @@ class Calendar {
                 bar.style.gridColumn = `${p.startCol + 1} / ${p.endCol + 2}`;
                 bar.style.backgroundColor = p.color;
                 const isReg = this.manager.isRegistered(p.tournament.id);
-                bar.textContent = `${isReg ? '✅ ' : ''}${p.label} ${p.name}`;
+                const stagePrefix = this._stagePrefix(p.tournament.name);
+                const displayName = stagePrefix ? `${stagePrefix} ${p.name}` : p.name;
+                bar.textContent = `${isReg ? '✅ ' : ''}${p.label} ${displayName}`;
                 bar.title = `${p.tournament.name} — ${p.label} ${this._fmtShort(p.startDate)}~${this._fmtShort(p.endDate)}`;
                 bar.addEventListener('click', e => {
                     e.stopPropagation();
@@ -236,8 +238,16 @@ class Calendar {
     }
 
     _shortName(name) {
-        let s = name.replace(/^\d{4}\s*/, '').replace(/^제?\d+회\s*/, '');
+        // 단계 정보 제거 후 대회명만 축약
+        let s = name.replace(/\s*\((?:1차\s*)?(?:최종\s*)?예선\)$/, '').replace(/^\d{4}\s*/, '').replace(/^제?\d+회\s*/, '');
         return s.length > 12 ? s.substring(0, 11) + '…' : s;
+    }
+
+    _stagePrefix(name) {
+        // 대회명에서 단계 태그 추출: "(1차 예선)" → "[1차예선]"
+        const m = name.match(/\((1차\s*예선|최종\s*예선|예선)\)$/);
+        if (m) return `[${m[1].replace(/\s/g, '')}]`;
+        return '';
     }
 
     _fmtShort(dateStr) {
