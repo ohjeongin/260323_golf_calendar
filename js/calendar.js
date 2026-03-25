@@ -243,7 +243,8 @@ class Calendar {
         if (phase === '공식연습') return '[공식연습]';
         if (phase === '신청-공식연습') return '[신청-공식연습]';
         const stageMatch = name.match(/\((1차\s*예선|최종\s*예선|예선)\)$/);
-        const stage = stageMatch ? stageMatch[1].replace(/\s/g, '') : '본선';
+        if (!stageMatch) return `[${phase}]`;
+        const stage = stageMatch[1].replace(/\s/g, '');
         return `[${phase}-${stage}]`;
     }
 
