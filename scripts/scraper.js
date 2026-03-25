@@ -70,10 +70,38 @@ function parseKGADate(text, year) {
 async function scrapeKGA(year = CURRENT_YEAR) {
     console.log(`[KGA] ${year}년 일정 수집 시작...`);
 
-    // tournamentCode → { name, venue, registration, dates(예선/본선) }
-    const tourMap = new Map();
+    function mergeDateRange(existing, incoming) {
+        if (!incoming) return existing;
+        if (!existing) return { ...incoming };
+        return {
+            start: incoming.start < existing.start ? incoming.start : existing.start,
+            end: incoming.end > existing.end ? incoming.end : existing.end
+        };
+    }
 
-    // --- 1단계: scheduleList에서 대회 일정(예선/본선) 수집 ---
+    // 원본 대회명에서 단계(stage) 추출
+    function parseStage(rawName, isFinal) {
+        let stage = '본선';
+        if (/\(1차\s*예선전/.test(rawName)) stage = '1차 예선';
+        else if (/\(최종\s*예선전/.test(rawName)) stage = '최종 예선';
+        else if (/\(예선전/.test(rawName)) stage = '예선';
+        else if (isFinal) stage = '본선';
+
+        const baseName = rawName
+            .replace(/\s*\(예선전[^)]*\)/g, '')
+            .replace(/\s*\(본선[^)]*\)/g, '')
+            .replace(/\s*\(최종\s*예선전[^)]*\)/g, '')
+            .replace(/\s*\(1차\s*예선전[^)]*\)/g, '')
+            .replace(/\s*\([가-힣A-Za-z\s]+부\s*[A-Z]?\)/g, '')
+            .trim();
+
+        return { baseName, stage };
+    }
+
+    // groupKey = "baseName|stage" → 병합된 대회 정보
+    const stageMap = new Map();
+
+    // --- 1단계: scheduleList에서 대회 일정 수집 (단계별 분리) ---
     try {
         const resp = await http.post(
             'https://www.kgagolf.or.kr/load/web/elite/scheduleList',
@@ -92,54 +120,31 @@ async function scrapeKGA(year = CURRENT_YEAR) {
             const rawName = entry.find('span.fs-4, span.fw-sb').first().text().trim();
             if (!rawName || shouldExclude(rawName)) return;
 
-            // 대회명에서 부문/조 정보 제거 → 상위 대회명만
-            const cleanName = rawName
-                .replace(/\s*\(예선전[^)]*\)/g, '')
-                .replace(/\s*\(본선[^)]*\)/g, '')
-                .replace(/\s*\(최종\s*예선전[^)]*\)/g, '')
-                .replace(/\s*\(1차\s*예선전[^)]*\)/g, '')
-                .replace(/\s*\([가-힣A-Za-z\s]+부\s*[A-Z]?\)/g, '')
-                .trim();
-
             const startDate = toDateStr(entry.attr('data-startdate'));
             const endDate = toDateStr(entry.attr('data-enddate'));
             const isFinal = entry.attr('data-finalyn') === 'Y';
 
+            const { baseName, stage } = parseStage(rawName, isFinal);
+            const groupKey = `${baseName}|${stage}`;
+
             const venueText = entry.find('h5').eq(1).text().replace(/\s+/g, ' ').trim();
             const venue = venueText.split('/')[0].trim() || '미정';
 
-            if (!tourMap.has(code)) {
-                tourMap.set(code, {
-                    code,
-                    name: cleanName,
-                    venue,
+            if (!stageMap.has(groupKey)) {
+                stageMap.set(groupKey, {
+                    baseName, stage, codes: [code], venue,
                     registration: null,
-                    qualification: null,
-                    finals: null
+                    period: { start: startDate, end: endDate }
                 });
-            }
-
-            const t = tourMap.get(code);
-            if (cleanName.length > t.name.length) t.name = cleanName;
-
-            if (isFinal) {
-                if (!t.finals) {
-                    t.finals = { start: startDate, end: endDate };
-                } else {
-                    if (startDate && startDate < t.finals.start) t.finals.start = startDate;
-                    if (endDate && endDate > t.finals.end) t.finals.end = endDate;
-                }
             } else {
-                if (!t.qualification) {
-                    t.qualification = { start: startDate, end: endDate };
-                } else {
-                    if (startDate && startDate < t.qualification.start) t.qualification.start = startDate;
-                    if (endDate && endDate > t.qualification.end) t.qualification.end = endDate;
-                }
+                const t = stageMap.get(groupKey);
+                if (!t.codes.includes(code)) t.codes.push(code);
+                t.period = mergeDateRange(t.period, { start: startDate, end: endDate });
+                if (t.venue === '미정' && venue !== '미정') t.venue = venue;
             }
         });
 
-        console.log(`[KGA] scheduleList: ${tourMap.size}개 대회 발견`);
+        console.log(`[KGA] scheduleList: ${stageMap.size}개 단계 발견`);
     } catch (e) {
         console.error('[KGA] scheduleList 오류:', e.message);
     }
@@ -162,49 +167,54 @@ async function scrapeKGA(year = CURRENT_YEAR) {
 
             const text = entry.text().replace(/\s+/g, ' ').trim();
 
-            // 참가신청기간 파싱: "참가신청기간 3. 10 .(화) 10시 ~ 3. 16 .(월) 16시"
+            // 대회명+단계 추출
+            const rawNameMatch = text.match(/\|\s*(.+?)\s*참가신청기간/);
+            const rawName = rawNameMatch ? rawNameMatch[1].trim() : '';
+            if (!rawName || shouldExclude(rawName)) return;
+
+            let stage = '본선';
+            if (/1차\s*예선전/.test(rawName)) stage = '1차 예선';
+            else if (/최종\s*예선전/.test(rawName)) stage = '최종 예선';
+            else if (/예선전/.test(rawName)) stage = '예선';
+
+            const baseName = rawName
+                .replace(/\s*\(예선전[^)]*\)/g, '')
+                .replace(/\s*\(본선[^)]*\)/g, '')
+                .replace(/\s*\(최종\s*예선전[^)]*\)/g, '')
+                .replace(/\s*\(1차\s*예선전[^)]*\)/g, '')
+                .replace(/\s*\([가-힣A-Za-z\s]+부\s*[A-Z]?\)/g, '')
+                .trim();
+
+            const groupKey = `${baseName}|${stage}`;
+
+            // 참가신청기간 파싱
             const regMatch = text.match(/참가신청기간\s+([\d\s.()가-힣시]+?)\s*~\s*([\d\s.()가-힣시]+?)(?:\s+장소|\s+추가|\s+대회기간)/);
             if (regMatch) {
                 const regStart = parseKGADate(regMatch[1], year);
                 const regEnd = parseKGADate(regMatch[2], year);
                 if (regStart && regEnd) {
-                    // scheduleList에 없었던 대회도 applyList에 있을 수 있음
-                    if (!tourMap.has(code)) {
-                        const rawName = text.match(/\|\s*(.+?)\s*참가신청기간/);
-                        const name = rawName ? rawName[1].trim() : `대회 ${code}`;
+                    if (!stageMap.has(groupKey)) {
                         const venueMatch = text.match(/장소\s*\/\s*코스\s+([\S]+)/);
-                        tourMap.set(code, {
-                            code,
-                            name: name.replace(/\s*\(예선전[^)]*\)/g, '').replace(/\s*\(본선[^)]*\)/g, '').replace(/\s*\([가-힣A-Za-z\s]+부\s*[A-Z]?\)/g, '').trim(),
+                        stageMap.set(groupKey, {
+                            baseName, stage, codes: [code],
                             venue: venueMatch ? venueMatch[1] : '미정',
-                            registration: null,
-                            qualification: null,
-                            finals: null
+                            registration: null, period: null
                         });
                     }
-
-                    const t = tourMap.get(code);
-                    if (!t.registration) {
-                        t.registration = { start: regStart, end: regEnd };
-                    } else {
-                        // 가장 빠른 시작, 가장 늦은 종료
-                        if (regStart < t.registration.start) t.registration.start = regStart;
-                        if (regEnd > t.registration.end) t.registration.end = regEnd;
-                    }
+                    const t = stageMap.get(groupKey);
+                    if (!t.codes.includes(code)) t.codes.push(code);
+                    t.registration = mergeDateRange(t.registration, { start: regStart, end: regEnd });
                 }
             }
 
-            // 대회기간도 보강: "대회기간 4. 7 .(화) ~ 4. 10 .(금)"
+            // 대회기간 보강
             const tourDateMatch = text.match(/대회기간\s+([\d\s.()가-힣]+?)\s*~\s*([\d\s.()가-힣]+?)$/);
-            if (tourDateMatch && tourMap.has(code)) {
+            if (tourDateMatch && stageMap.has(groupKey)) {
                 const tStart = parseKGADate(tourDateMatch[1], year);
                 const tEnd = parseKGADate(tourDateMatch[2], year);
                 if (tStart && tEnd) {
-                    const t = tourMap.get(code);
-                    // qualification/finals 가 없으면 보강
-                    if (!t.qualification && !t.finals) {
-                        t.qualification = { start: tStart, end: tEnd };
-                    }
+                    const t = stageMap.get(groupKey);
+                    t.period = mergeDateRange(t.period, { start: tStart, end: tEnd });
                 }
             }
         });
@@ -214,60 +224,24 @@ async function scrapeKGA(year = CURRENT_YEAR) {
         console.error('[KGA] applyList 오류:', e.message);
     }
 
-    // --- 3단계: 같은 대회명 그룹핑 (예선 A/B/C/D/E, 남/여, 1차/최종 등을 하나로 병합) ---
-    function mergeDateRange(existing, incoming) {
-        if (!incoming) return existing;
-        if (!existing) return { ...incoming };
-        return {
-            start: incoming.start < existing.start ? incoming.start : existing.start,
-            end: incoming.end > existing.end ? incoming.end : existing.end
-        };
-    }
-
-    const nameMap = new Map();
-    for (const [code, t] of tourMap) {
-        const baseName = t.name;
-        if (!nameMap.has(baseName)) {
-            nameMap.set(baseName, { ...t, codes: [code] });
-        } else {
-            const merged = nameMap.get(baseName);
-            merged.codes.push(code);
-            merged.registration = mergeDateRange(merged.registration, t.registration);
-            merged.qualification = mergeDateRange(merged.qualification, t.qualification);
-            merged.finals = mergeDateRange(merged.finals, t.finals);
-            // 더 긴 이름 우선
-            if (t.name.length > merged.name.length) merged.name = t.name;
-            // venue가 미정이 아닌 것 우선
-            if (merged.venue === '미정' && t.venue !== '미정') merged.venue = t.venue;
-        }
-    }
-
-    // 추가 그룹핑: 같은 대회의 1차 예선/최종 예선/본선이 이름이 약간 다를 수 있음
-    // 예: "한국오픈골프선수권대회(1차 예선전)" vs "한국오픈골프선수권대회"
-    // 이미 cleanName에서 제거했으므로 여기서는 nameMap이 정확해야 함
-
-    // 결과 변환
+    // --- 3단계: 결과 변환 ---
     const results = [];
-    for (const [name, t] of nameMap) {
-        const dateYear = parseInt(
-            t.finals?.start?.slice(0, 4) ||
-            t.qualification?.start?.slice(0, 4) ||
-            t.registration?.start?.slice(0, 4) ||
-            String(year)
-        );
+    for (const [groupKey, t] of stageMap) {
+        const displayName = t.stage === '본선' ? t.baseName : `${t.baseName} (${t.stage})`;
+        const dateYear = parseInt(t.period?.start?.slice(0, 4) || t.registration?.start?.slice(0, 4) || String(year));
 
         results.push({
             id: `kga-${dateYear}-${t.codes[0]}`,
-            name: t.name,
+            name: displayName,
             association: 'KGA',
-            type: guessType(t.name),
+            type: guessType(t.baseName),
             year: dateYear,
             verified: true,
             lastVerified: TODAY,
             dates: {
                 registration: t.registration,
-                qualification: t.qualification,
-                finals: t.finals,
+                qualification: null,
+                finals: t.period,
                 practice: null
             },
             venue: t.venue,
@@ -276,7 +250,7 @@ async function scrapeKGA(year = CURRENT_YEAR) {
         });
     }
 
-    console.log(`[KGA] ${results.length}개 대회 수집 완료 (그룹핑 후)`);
+    console.log(`[KGA] ${results.length}개 항목 수집 완료 (단계별 분리)`);
     return results;
 }
 
