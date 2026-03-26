@@ -579,7 +579,8 @@ async function main() {
     const allScraped = [];
 
     // KGA 스크래핑 (올해 ~ 내년까지)
-    for (const year of [CURRENT_YEAR, CURRENT_YEAR + 1]) {
+    // 올해 ~ 4년 후까지 스크래핑 (2030년까지 대비)
+    for (const year of Array.from({length: 5}, (_, i) => CURRENT_YEAR + i)) {
         try {
             const kga = await scrapeKGA(year);
             allScraped.push(...kga);
