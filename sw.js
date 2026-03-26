@@ -1,5 +1,5 @@
 // Service Worker — Golf Calendar
-const CACHE = 'golf-calendar-v2';
+const CACHE = 'golf-calendar-v3';
 const ASSETS = [
     './',
     './index.html',
@@ -39,8 +39,12 @@ self.addEventListener('fetch', e => {
         );
         return;
     }
-    // 나머지는 캐시 우선
+    // 나머지도 네트워크 우선, 실패 시 캐시
     e.respondWith(
-        caches.match(e.request).then(cached => cached || fetch(e.request))
+        fetch(e.request).then(res => {
+            const clone = res.clone();
+            caches.open(CACHE).then(c => c.put(e.request, clone));
+            return res;
+        }).catch(() => caches.match(e.request))
     );
 });
