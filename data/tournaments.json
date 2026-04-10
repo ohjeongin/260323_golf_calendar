@@ -6,7 +6,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": {
         "start": null,
@@ -35,7 +35,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -56,7 +56,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": {
         "start": "2026-03-10",
@@ -81,7 +81,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -103,7 +103,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": {
         "start": "2026-03-18",
@@ -134,7 +134,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": {
         "start": null,
@@ -163,7 +163,7 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": {
         "start": "2026-03-31",
@@ -188,7 +188,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": {
         "start": null,
@@ -217,7 +217,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": {
         "start": "2026-04-07",
@@ -242,7 +242,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -263,9 +263,12 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
-      "registration": null,
+      "registration": {
+        "start": "2026-04-10",
+        "end": "2026-04-16"
+      },
       "qualification": null,
       "finals": {
         "start": "2026-04-30",
@@ -291,7 +294,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": {
         "start": null,
@@ -320,7 +323,7 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": {
         "start": "2026-04-21",
@@ -345,7 +348,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": {
         "start": "2026-04-22",
@@ -370,7 +373,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": {
         "start": "2026-04-13",
@@ -401,7 +404,7 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": {
         "start": "2026-05-01",
@@ -426,7 +429,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -448,7 +451,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -469,7 +472,7 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -491,7 +494,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -513,7 +516,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -535,7 +538,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -557,7 +560,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -579,7 +582,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -601,7 +604,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -623,7 +626,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -645,7 +648,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -667,7 +670,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -689,7 +692,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -711,7 +714,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -732,7 +735,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -754,7 +757,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -776,7 +779,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -798,7 +801,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -820,7 +823,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-04-09",
+    "lastVerified": "2026-04-10",
     "dates": {
       "registration": null,
       "qualification": null,
