@@ -6,7 +6,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": null,
@@ -35,7 +35,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -56,7 +56,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": "2026-03-10",
@@ -103,7 +103,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": "2026-03-18",
@@ -134,7 +134,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": null,
@@ -163,7 +163,7 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": "2026-03-31",
@@ -177,7 +177,7 @@
       "practice": null,
       "practiceRegistration": null
     },
-    "venue": "라비에벨 듄스",
+    "venue": "라비에벨",
     "categories": [],
     "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1722"
   },
@@ -188,7 +188,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": null,
@@ -217,7 +217,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": "2026-04-07",
@@ -242,7 +242,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -263,7 +263,7 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": "2026-04-10",
@@ -294,7 +294,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": null,
@@ -323,7 +323,7 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": "2026-04-21",
@@ -337,7 +337,7 @@
       "practice": null,
       "practiceRegistration": null
     },
-    "venue": "라비에벨 듄스",
+    "venue": "라비에벨",
     "categories": [],
     "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1729"
   },
@@ -348,7 +348,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": "2026-04-22",
@@ -379,7 +379,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": "2026-04-13",
@@ -410,7 +410,7 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": "2026-05-01",
@@ -463,7 +463,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": null,
@@ -492,7 +492,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -518,7 +518,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -539,7 +539,7 @@
     "type": "open",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": "2026-05-22",
@@ -570,7 +570,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": null,
@@ -599,7 +599,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": "2026-06-03",
@@ -619,7 +619,7 @@
         "end": "2026-06-15"
       }
     },
-    "venue": "클럽디 더플레이어스",
+    "venue": "클럽디",
     "categories": [],
     "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1735"
   },
@@ -630,7 +630,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": "2026-06-04",
@@ -650,7 +650,7 @@
         "end": "2026-06-15"
       }
     },
-    "venue": "베어크리크 포천",
+    "venue": "베어크리크",
     "categories": [],
     "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1736"
   },
@@ -661,7 +661,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": null,
@@ -712,7 +712,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": "2026-06-24",
@@ -743,7 +743,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": "2026-07-02",
@@ -796,7 +796,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": null,
@@ -825,7 +825,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": "2026-07-15",
@@ -845,7 +845,7 @@
         "end": "2026-07-27"
       }
     },
-    "venue": "골프존카운티 오라",
+    "venue": "골프존카운티",
     "categories": [],
     "url": "https://www.kgagolf.or.kr/web/elite/tour/tourInfo?tournamentCode=1742"
   },
@@ -856,7 +856,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": "2026-07-22",
@@ -887,7 +887,7 @@
     "type": "student",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": null,
@@ -916,7 +916,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": "2026-08-05",
@@ -975,7 +975,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": null,
       "qualification": null,
@@ -996,7 +996,7 @@
     "type": "amateur",
     "year": 2026,
     "verified": true,
-    "lastVerified": "2026-08-01",
+    "lastVerified": "2026-08-02",
     "dates": {
       "registration": {
         "start": "2026-08-19",
